@@ -1,0 +1,69 @@
+$wrapper-width: 		100%;
+$container-width: 		1240px;
+$gutter-width: 			40px;
+$maximum-columns:		12;
+
+/*screen size breackpoints for media queries */
+$xs-screen:				640px;
+$xs-screen-landscape:	640px;
+$m-screen:          	768px;
+$m-screen-landscape: 	1024px;
+$l-screen:				1366px;
+$lg-screen:				1920px;
+
+/* Colors */
+$primary-color:			#FFFFFF;
+$secondary-color: 		#A9FFD6;
+$tertiary-color:		#FF785D;
+$quaternary-color:		#2D2D2D;
+
+
+/* Fonts */
+@include declare-font-face(Roboto Medium, roboto-medium-webfont, normal);
+@include declare-font-face(Lato Sans Hairline, lato-hairline-webfont, normal);
+
+$base-font-family:		Lato Sans Hairline, Helvetica, Arial, sans-serif;
+
+$headings-fonfamily: 	Roboto Medium, Helvetica, Arial, sans-serif;
+
+$nav-font-family:		Lato Sans Hairline, Helvetica, Arial, sans-serif;
+
+$base-font-size:		18px;
+$h1-font-size:			2.2em;
+$h2-font-size:			1.5em;
+$h3-font-size:			1.3em;
+$h4-font-size:			1.2em;
+
+
+/*social bar*/
+$social-bar-bg-color:				darken($quaternary-color,20%);
+$social-bar-links-color:			$secondary-color;
+$social-bar-links-color-hover:		$tertiary-color;
+$social-bar-links-bg-color:			$primary-color;
+$social-bar-links-bg-color-hover:	lighten($tertiary-color, 30%);
+$social-bar-font-size:				1.7em;
+
+
+/*nav bar*/
+$nav-bar-bg-color:					darken($quaternary-color,20%);
+$nav-bar-links-color:				$secondary-color;
+$nav-bar-links-color-hover:			$tertiary-color;
+$nav-bar-links-bg-color:			$primary-color;
+$nav-bar-links-bg-color-hover:		lighten($tertiary-color, 30%);
+$nav-bar-font-size:					1;
+
+/*header*/
+$header-bg-color:					$quaternary-color;
+
+
+/*footer*/
+$footer-bg-color:					$quaternary-color;
+
+
+/*optional files*/
+$use-slider:						false;
+
+
+
+
+

@@ -1,0 +1,143 @@
+html,
+body{
+	height: 100%;
+}
+html{
+	font-size: $base-font-size;
+}
+@function columns($columns, $container-columns: $maximum-columns) {
+	$column-width: 100% /$container-columns;
+	$width: $columns * $column-width;
+	@return $width;
+}
+figure{
+	margin: 0;
+}
+*{
+	box-sizing: border-box;
+}
+a {
+	outline: 0px;
+}
+.wrapper {
+	max-width: $wrapper-width;
+	margin: auto;
+}
+.container {
+	max-width: $container-width;
+	margin: auto;
+}
+h1,
+h2,
+h3,
+h4{
+	font-family: $headings-font-family;
+}
+// ===========
+// GRILLE
+// ===========
+
+[class*="col-lg-"] {
+	float: left;
+	padding-left: $gutter-width/2;
+	padding-right: $gutter-width/2;
+	position: relative;
+}
+
+@for $i from 1 through $maximum-columns {
+	.col-lg-#{$i} {
+		width: columns($i);
+	}
+}
+
+@for $i from 0 through $maximum-columns {
+	.col-lg-offset-#{$i} {
+		margin-left: columns($i);
+	}
+}
+
+
+// ===========
+// GRILLE
+// ===========
+@media all and (max-width: $l-screen){
+	@for $i from 1 through $maximum-columns {
+		.col-md-#{$i} {
+			width: columns($i);
+		}
+	}
+
+	@for $i from 0 through $maximum-columns {
+		.col-md-offset-#{$i} {
+			margin-left: columns($i);
+		}
+	}
+}
+
+// ===========
+// TABLETTES
+// ===========
+@media all and (max-width: $m-screen){
+	@for $i from 1 through $maximum-columns {
+		.col-sm-#{$i} {
+			width: columns($i);
+		}
+	}
+
+	@for $i from 0 through $maximum-columns {
+		.col-sm-offset-#{$i} {
+			margin-left: columns($i);
+		}
+	}
+}
+
+// ===========
+// TABLETTES LANDSCAPE
+// ===========
+@media all and (max-width: $m-screen-landscape) and (orientation: landscape){
+	@for $i from 1 through $maximum-columns {
+		.col-sml-#{$i} {
+			width: columns($i);
+		}
+	}
+
+	@for $i from 0 through $maximum-columns {
+		.col-sml-offset-#{$i} {
+			margin-left: columns($i);
+		}
+	}
+}
+
+// ===========
+// MOBILES
+// ===========
+@media all and (max-width: $xs-screen){
+	@for $i from 1 through $maximum-columns {
+		.col-xs-#{$i} {
+			width: columns($i);
+		}
+	}
+
+	@for $i from 0 through $maximum-columns {
+		.col-xs-offset-#{$i} {
+			margin-left: columns($i);
+		}
+	}
+}
+
+// ===========
+// MOBILES LANDSCAPE
+// ===========
+@media all and (max-width: $xs-screen) and (orientation: landscape){
+	@for $i from 1 through $maximum-columns {
+		.col-xsl-#{$i} {
+			width: columns($i);
+		}
+	}
+
+	@for $i from 0 through $maximum-columns {
+		.col-xsl-offset-#{$i} {
+			margin-left: columns($i);
+		}
+	}
+}
